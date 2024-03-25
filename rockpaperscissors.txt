@@ -1,0 +1,95 @@
+# Write your code below this line 👇
+import random
+print("Rock, Paper, Scissors?")
+input = input()
+input = input.lower()
+
+if input != "rock":
+  if input != "scissors":
+    if input!= "paper":
+      print("Not gonna work")
+else:
+  list = ["rock","paper","scissors"]
+  findindex = list.index(input)
+  pickrandom = random.randint(0,len(list)-1)
+  opps = list[pickrandom].capitalize()
+  yourpick = list[findindex].capitalize() 
+  print(f"You have picked {yourpick}")
+
+  if findindex == 0:
+    print("""
+        _______
+    ---'   ____)
+          (_____)
+          (_____)
+          (____)
+    ---.__(___)
+    """)
+
+  if findindex == 1:
+    print("""
+         _______
+    ---'    ____)____
+               ______)
+              _______)
+             _______)
+    ---.__________)
+    """)
+  if findindex == 2:
+    print("""
+        _______
+    ---'   ____)____
+              ______)
+           __________)
+          (____)
+    ---.__(___)
+    """)
+
+  print("-----------------------------------")
+
+  print(f"Computer picked {opps}")
+
+  if opps == "Rock":
+    print("""
+        _______
+    ---'   ____)
+          (_____)
+          (_____)
+          (____)
+    ---.__(___)
+    """)
+
+  if opps == "Scissors": 
+    print("""
+        _______
+    ---'   ____)____
+              ______)
+           __________)
+          (____)
+    ---.__(___)
+    """)
+  if opps == "Paper":
+    print("""
+         _______
+    ---'    ____)____
+               ______)
+              _______)
+             _______)
+    ---.__________)
+    """)
+
+
+  if opps == "Paper" and input == "rock":
+    print("You LOSE!")
+  elif opps == "Rock" and input == "paper":
+    print("You WIN!")
+  elif opps == "Scissors" and input == "paper":
+    print("You LOSE!")
+  elif opps == "Paper"  and input == "scissors":
+    print("You WIN!")
+  elif opps == "Rock" and input == "scissors":
+    print("You LOSE!")
+  elif opps == "Scissors" and input == "rock":
+    print("You WIN!")
+  else: 
+    print("It is a draw!")
